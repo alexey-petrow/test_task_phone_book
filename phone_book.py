@@ -119,7 +119,7 @@ class PhoneBook:
                 matched_records_indexes.append(index)
 
         if len(matched_records_indexes) == 0:
-            print('No records found!')
+            print('\nNo records found!')
             return
 
         if len(matched_records_indexes) > 1:
@@ -175,4 +175,4 @@ class PhoneBook:
             for match in matches:
                 print(match)
         else:
-            print('No records found!')
+            print('\nNo records found!')

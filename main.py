@@ -34,16 +34,16 @@ def main():
         path_to_phone_book_data_file=FILEPATH,
         page_size=2,
     )
+    print('Hello! Welcome to phonebook.')
     while True:
         if phone_book.db_file_existence_check() is False:
             break
-        print('Hello! Welcome to phonebook.')
         print('\nMenu:')
         print('1. Show all records')
         print('2. Add new record')
         print('3. Edit record')
         print('4. Search record')
-        print('5. Exit program')
+        print('5 or q. Exit program')
 
         user_choice = input('Choose option (1-5): ')
 
@@ -53,7 +53,7 @@ def main():
         )
         if function_to_call is not None:
             function_to_call()
-        elif user_choice == '5':
+        elif user_choice == '5' or user_choice == 'q':
             print('Bye, bye!')
             break
         else:
